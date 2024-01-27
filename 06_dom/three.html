@@ -1,0 +1,35 @@
+div<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM-CHAY OR CODE</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+
+  </body>
+  <script>
+    // creating div element in js
+    const div = document.createElement('div');
+    div.className = "mainContainer";
+    div.id = Math.round(Math.random() * 10 + 1);
+    div.setAttribute("title", "generatedTitle");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    // div.innerText = "this is div mainContainer and this is made up with help of javaScript!"
+    //preferable
+    const textNode = document.createTextNode(
+      "this is div mainContainer and this is made up with help of javaScript!"
+    );
+    div.append(textNode);
+
+    document.body.appendChild(div);
+  </script>
+</html>

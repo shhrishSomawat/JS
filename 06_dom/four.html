@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai Or Code ~ DOM</title>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <ul class="lan">
+      <li>javaScript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+
+      document.querySelector(".lan").appendChild(li);
+    }
+
+    addLanguage("ruby");
+    addLanguage("python");
+    addLanguage("reactJS");
+
+    function addOptiLang(lang) {
+      const li = document.createElement('li');
+      li.appendChild(document.createTextNode(lang))
+      document.querySelector('.lan').appendChild(li);
+    }
+
+    addOptiLang('goLang');
+
+
+    //Edit ruby
+    
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // either
+    // secondLang.innerHTML = "cPlusPlus"
+    // or
+    const newLi = document.createElement('li')
+    newLi.textContent = "cPlusPlus"
+    secondLang.replaceWith(newLi)
+
+    //edit reactJS with Vue js
+    const lastLang = document.querySelector("li:nth-child(4)")
+    const nayali = document.createElement('li')
+    nayali.textContent = "Vue.JS"
+    lastLang.replaceWith(nayali)
+
+
+    //want to remove last child from the list that is golang
+    const lastchild = document.querySelector('li:last-child')
+    // console.log(lastchild);
+    lastchild.remove()
+
+
+  </script>
+</html>
