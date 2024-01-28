@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script>
+      //       // thisis third param it is by default false because some app dont done withiut getting true r false
+
+      //       // attatchEvent --> early time when internet ecplorer was a thing
+      //       //jquery --> react ka baap // oneventlistener
+
+      //       /*
+      //       1.type
+      //       2.timeStamp
+      //       3.defaultprevented
+      //       4.target
+      //       5.toElement
+      //       6.srcElement
+      //       7.currentTarget
+      //       8.clientX,clientY
+      //       9.offSet
+      //       10.screenX,screenY
+      //       11.altKey
+      //       12.ctrlKey
+      //       13.shiftKey
+      //       14.keyCode
+      // */
+
+      //       document.getElementById("images").addEventListener(
+      //         "click",
+      //         (e) => {
+      //           console.log("clicked Inside the UL");
+      //         },false);
+
+      //         document.getElementById("owl").addEventListener(
+      //         "click",
+      //         (e) => {
+      //           console.log("clicked owL")
+      //           e.stopPropagation()
+      //         },false);
+
+      //         document.getElementById("google").addEventListener("click",(e)=>{
+      //           e.preventDefault()
+      //           e.stopPropagation()
+      //           console.log('google clicked');
+      //         },false)
+      // difference between true and false param event bubbling and event capturing
+
+      //jaise hi images par clck karu woh gayab ho jaywe
+
+      document.getElementById("images").addEventListener(
+        "click",
+        (e) => {
+          if (e.target.tagName === "IMG") {
+            console.log(e.target.id);
+            console.log(e.target.parentNode.remove());
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
