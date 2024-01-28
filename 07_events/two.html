@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai Aur Code</h1>
+    <button id="stop">Stop</button>
+    <script>
+      //settimeout
+      const sayhitesh = function () {
+        console.log("shrish somawat");
+      };
+      setTimeout(sayhitesh, 2000); //it calls api
+
+      const changehead = function () {
+        document.querySelector("h1").innerHTML = "best JS series";
+      };
+      const change_Heading = setTimeout(changehead, 3000);
+
+      //how to stop that event
+      //clearTimeOut
+      document.querySelector("#stop").addEventListener("click", () => {
+        console.log('stop');
+        clearTimeout(change_Heading);
+      });
+    </script>
+  </body>
+</html>
